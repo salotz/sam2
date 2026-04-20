@@ -33,7 +33,7 @@ def generate_ensemble(
         no_minimize: bool = False,
         keep_no_min: bool = False,
         ca: bool = False,
-        time: bool = True,
+        track_time: bool = True,
 ) -> None:
 
     #---------------
@@ -143,7 +143,7 @@ def generate_ensemble(
     #------------
 
     timing["all"] = time.time() - timing["all"]
-    if time:
+    if track_time:
         with open(f"{out_path}.time.txt", "w") as o_fh:
             for stage in timing:
                 o_fh.write(f"{stage}: {timing[stage]}\n")
@@ -200,7 +200,7 @@ def main():
         no_minimize=args.no_minimize,
         keep_no_min=args.keep_no_min,
         ca=args.ca,
-        time=args.time,
+        track_time=args.time,
     )
 
 
