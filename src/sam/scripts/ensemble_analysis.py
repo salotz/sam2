@@ -14,8 +14,7 @@ import json
 import mdtraj
 from sam.trajectory import calc_initrmsd, calc_ssep, calc_q_values
 
-
-if __name__ == "__main__":
+def main():
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-n', '--native_pdb', type=str, required=True,
@@ -68,3 +67,6 @@ if __name__ == "__main__":
 
     # Print results.
     print(json_data)
+
+if __name__ == "__main__":
+    main()

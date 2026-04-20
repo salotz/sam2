@@ -16,9 +16,7 @@ import mdtraj
 from sam.data.topology import slice_ca_traj
 from sam.evaluation.scores import score_pcc_ca_rmsf, score_chiJSD, mstats_stereo
 
-
-if __name__ == "__main__":
-
+def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-P', '--ref_top', type=str, required=True,
         help='topology file of the reference ensemble'
@@ -73,3 +71,7 @@ if __name__ == "__main__":
 
     # Print results.
     print(json_data)
+
+if __name__ == "__main__":
+
+    main()

@@ -17,9 +17,7 @@ from sam.utils import read_cfg_file, print_msg, check_sam_weights
 from sam.data.topology import get_seq_from_top
 from sam.minimizer.runner import Minimizer
 
-
-if __name__ == "__main__":
-
+def main():
     parser = argparse.ArgumentParser(
         description=__doc__)
     parser.add_argument('-c', '--config_fp', type=str, required=True,
@@ -168,3 +166,7 @@ if __name__ == "__main__":
         with open(f"{args.out_path}.time.txt", "w") as o_fh:
             for stage in timing:
                 o_fh.write(f"{stage}: {timing[stage]}\n")
+
+
+if __name__ == "__main__":
+    main()
