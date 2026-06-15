@@ -212,7 +212,7 @@ def generate_ensemble(
         )
         min_traj.save(min_traj_path)
         min_top_path = f"{out_path}{min_out_str}.top.pdb"
-        _LOGGER.infox(
+        _LOGGER.info(
             f"- Saving a topology PDB file to: {min_top_path}",
         )
         min_traj[0].save(min_top_path)
